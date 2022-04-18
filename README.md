@@ -32,5 +32,7 @@ note that compiled contract file name is the same as the contract name in solidi
 
 deploy smart contract:
 ```sh
-truffle migrate
+# deploy smart contract to specific network
+# networks configuration in truffle-config.js
+truffle migrate --network {network}
 ```

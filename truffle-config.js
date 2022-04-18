@@ -8,9 +8,16 @@ const BINAINCE_TESTNET_RPC_URL = process.env.BINAINCE_TESTNET_RPC_URL
 module.exports = {
   // Configure chain rpc-URL and chain_id
   networks: {
-    development: {
+    binaince_testnet: {
       provider: () => new HDWalletProvider(MNEMONIC, BINAINCE_TESTNET_RPC_URL),//node rpcUrl
       network_id: 97,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    rinkeby: {
+      provider: () => new HDWalletProvider(MNEMONIC, RINKEBY_RPC_URL),//node rpcUrl
+      network_id: 4,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
